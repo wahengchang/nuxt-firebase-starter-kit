@@ -20,3 +20,6 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out the [Nuxt.js](https://github.com/nuxt/nuxt.js) and [Vuetify.js](https://vuetifyjs.com/) documentation.
+
+## Reference
+ - [https://www.davidroyer.me/blog/nuxtjs-firebase-auth/](https://www.davidroyer.me/blog/nuxtjs-firebase-auth/)
