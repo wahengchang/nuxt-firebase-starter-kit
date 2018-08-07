@@ -3,6 +3,7 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  mode: 'spa',
   head: {
     title: 'voice-man',
     meta: [
@@ -15,7 +16,7 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
-  plugins: ['~/plugins/vuetify.js'],
+  plugins: ['~/plugins/vuetify.js', '~/plugins/fireauth.js'],
   css: [
     '~/assets/style/app.styl'
   ],
@@ -27,6 +28,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    cssSourceMap: false, // add this into the nuxt.config
     vendor: [
       '~/plugins/vuetify.js'
     ],
@@ -35,6 +37,7 @@ module.exports = {
     ** Run ESLint on save
     */
     extend (config, ctx) {
+      config.devtool = false
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -44,5 +47,8 @@ module.exports = {
         })
       }
     }
+  },
+  router: {
+    middleware: 'router-auth'
   }
 }
