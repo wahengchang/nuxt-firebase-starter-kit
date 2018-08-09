@@ -5,10 +5,11 @@
   "author": "waheng chang <wahengchang@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "npm run locator ;nuxt",
+    "build": "npm run locator ;nuxt build",
+    "start": "npm run locator ;nuxt start",
+    "generate": "npm run locator ;nuxt generate",
+    "locator": "node locator"
   },
   "dependencies": {
     "firebase": "^5.3.1",
