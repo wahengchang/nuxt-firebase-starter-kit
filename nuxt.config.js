@@ -14,9 +14,11 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
+    ],
+    script: [
+      { src: '/locator.js' }
     ]
   },
-  plugins: ['~/plugins/vuetify.js', '~/plugins/fireauth.js'],
   css: [
     '~/assets/style/app.styl'
   ],
@@ -48,7 +50,11 @@ module.exports = {
       }
     }
   },
+  plugins: [
+    '~/plugins/vuetify.js',
+    {src: '~/plugins/fireauth.js', ssr: false}
+  ],
   router: {
-    middleware: 'router-auth'
+    middleware: ['router-auth']
   }
 }
