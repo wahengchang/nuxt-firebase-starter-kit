@@ -1,39 +1,8 @@
 <template>
   <div>
-    <header>
-      <div class="headerRow">
-        <h1>
-          <a href="/">
-            Firebase Starter
-          </a>
-        </h1>
-        <span>
-          Interview purpose, online instant real-time JavaScript code editor.
-        </span>
-      </div>
-    </header>
     <nuxt />
   </div>
 </template>
-
-<script>
-export default {
-  components: {},
-  computed: {}
-}
-</script>
-
-<style scoped>
-.headerRow {
-  padding-top: 5px;
-  padding-left: 5px;
-}
-
-.headerRow a {
-  text-decoration: none;
-  color: black;
-}
-</style>
 
 <style>
 html {
@@ -82,10 +51,5 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
-}
-
-header {
-  height: 80px;
-  background-color: #f7df1f;
 }
 </style>

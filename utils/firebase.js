@@ -8,7 +8,9 @@ const config = {
   authDomain: process.env.FIREBASE_AUTH_DOMAIN || window.FIREBASE_AUTH_DOMAIN,
   databaseURL: process.env.FIREBASE_DB_URL || window.FIREBASE_DB_URL,
   projectId: process.env.FIREBASE_PROJECT_ID || window.FIREBASE_PROJECT_ID,
-  messagingSenderId: process.env.FIREBASE_MESSAGEING_ID || window.FIREBASE_MESSAGEING_ID
+  messagingSenderId:
+    process.env.FIREBASE_MESSAGEING_ID || window.FIREBASE_MESSAGEING_ID,
+  appId: process.env.FIREBASE_APP_ID || window.FIREBASE_APP_ID
 }
 
 if (!firebase.apps.length) {

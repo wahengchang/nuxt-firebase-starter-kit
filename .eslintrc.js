@@ -1,16 +1,26 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
   env: {
     browser: true,
     node: true
   },
-  extends: 'standard',
-  // required to lint *.vue files
+  parserOptions: {
+    parser: 'babel-eslint'
+  },
+  extends: [
+    '@nuxtjs',
+    'plugin:nuxt/recommended',
+    'plugin:prettier/recommended',
+    'prettier',
+    'prettier/vue'
+  ],
   plugins: [
-    'html'
+    'prettier'
   ],
   // add your custom rules here
-  rules: {},
-  globals: {}
+  rules: {
+    'nuxt/no-cjs-in-config': 'off',
+    'no-console': 'off',
+    'standard/no-callback-literal': 0
+  }
 }

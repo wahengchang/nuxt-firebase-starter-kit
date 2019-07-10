@@ -1,8 +1,8 @@
 <template>
   <div>
     <div text-xs-center xs12 sm6 offset-sm3>
-      <button class="signIn mb-2" @click="googleSignUp">
-        Google Sign In
+      <button class="signIn mb-2" @click="githubSignUp">
+        Github Sign In
       </button>
     </div>
   </div>
@@ -13,9 +13,9 @@ import firebase, { auth } from '~/utils/firebase'
 
 export default {
   methods: {
-    async googleSignUp() {
-      await auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
-      console.log('Finished Google login')
+    async githubSignUp() {
+      await auth.signInWithPopup(new firebase.auth.GithubAuthProvider())
+      console.log('Finished Github login')
       return location.reload()
     }
   }

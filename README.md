@@ -1,6 +1,9 @@
-# voice-man
+# nuxt-firebase-starter-kit
 
-> Nuxt.js + Vuetify.js project
+Read more : [blog](https://hackernoon.com/vue-nuxt-firebase-auth-database-ssr-example-tutorial-facebook-login-setup-authentication-starter-app-a6dfde0133fc)
+
+![alt text](https://miro.medium.com/max/1600/1*YU-y8w5pGS6RoumVtVJkbg.png "nuxt-firebase-starter-kit")
+
 
 ## Setup Firebase keys
 create `env.sh` in root directary, and setup your firebase key 
@@ -16,6 +19,8 @@ echo "set FIREBASE_PROJECT_ID"
 export FIREBASE_PROJECT_ID="foo"
 echo "set FIREBASE_MESSAGEING_ID"
 export FIREBASE_MESSAGEING_ID="foo-id"
+echo "set FIREBASE_APP_ID"
+export FIREBASE_APP_ID="app-id"
 ```
 
 then run 
@@ -46,7 +51,6 @@ $ npm start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out the [Nuxt.js](https://github.com/nuxt/nuxt.js) and [Vuetify.js](https://vuetifyjs.com/) documentation.
 
 ## Reference
  - [https://www.davidroyer.me/blog/nuxtjs-firebase-auth/](https://www.davidroyer.me/blog/nuxtjs-firebase-auth/)
